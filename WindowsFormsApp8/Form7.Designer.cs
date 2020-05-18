@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -53,15 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(543, 119);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(-6, 454);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(544, 87);
-            this.panel2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -71,6 +62,23 @@
             this.label1.Size = new System.Drawing.Size(197, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Меню Бегуна";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(-6, 454);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(544, 87);
+            this.panel2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.textBox1.Location = new System.Drawing.Point(110, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
@@ -122,14 +130,6 @@
             this.button5.Text = "Контакты";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.textBox1.Location = new System.Drawing.Point(110, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(445, 394);
@@ -138,6 +138,10 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Назад ";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form7
             // 
