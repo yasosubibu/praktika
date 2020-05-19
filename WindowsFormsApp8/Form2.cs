@@ -23,5 +23,16 @@ namespace WindowsFormsApp8
             Fmain.Show();
             Hide();
         }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void cash_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

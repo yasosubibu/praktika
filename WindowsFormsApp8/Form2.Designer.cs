@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,17 +49,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cash = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cash)).BeginInit();
             this.SuspendLayout();
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Location = new System.Drawing.Point(403, 253);
-            this.domainUpDown1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(107, 20);
-            this.domainUpDown1.TabIndex = 0;
-            this.domainUpDown1.Text = "0";
             // 
             // label1
             // 
@@ -257,11 +249,35 @@
             this.button2.Text = "Оплатить";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // cash
+            // 
+            this.cash.Location = new System.Drawing.Point(339, 253);
+            this.cash.Maximum = new decimal(new int[] {
+            1661992960,
+            1808227885,
+            5,
+            0});
+            this.cash.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.cash.Name = "cash";
+            this.cash.Size = new System.Drawing.Size(165, 20);
+            this.cash.TabIndex = 23;
+            this.cash.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.cash.ValueChanged += new System.EventHandler(this.cash_ValueChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 539);
+            this.Controls.Add(this.cash);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
@@ -279,7 +295,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.domainUpDown1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -287,14 +302,13 @@
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -316,5 +330,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown cash;
     }
 }

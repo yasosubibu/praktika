@@ -20,32 +20,80 @@ namespace WindowsFormsApp8
 
         private void Buttonlogin_Click(object sender, EventArgs e)
         {
-            String login = loginbox.Text;
-            String pass = passbox.Text;
-            Form7 Fr = new Form7();
-            db DB = new db();
+            /* String login = loginbox.Text;
+             String pass = passbox.Text;
+             Form7 Fr = new Form7();
+             db DB = new db();
 
-            DataTable table = new DataTable();
+             DataTable table = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `Email`= @uL AND `Password`= @uP", DB.getConnection());
+             MySqlCommand command = new MySqlCommand("SELECT * FROM `user` WHERE `Email`= @uL AND `Password`= @uP", DB.getConnection());
 
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = pass;
+             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
+             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = pass;
 
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+             adapter.SelectCommand = command;
+             adapter.Fill(table);
 
-            if (table.Rows.Count > 0)
+             if (table.Rows.Count > 0)
+             {
+                 Fr.Show();
+                 Hide();
+             }
+             else
+                 MessageBox.Show("Пользователь не авторизован");
+ */
+            string connection = "Database=marathon-skills-2020;" + "Data Source=127.0.0.1;" + "User Id=root;" + "Password=root;";
+            MySqlConnection connect = new MySqlConnection(connection);
+            connect.Open();
+            
+            MySqlCommand command = new MySqlCommand("SELECT COUNT(*) ,RoleId,Password,Email,FirstName,LastName " + "FROM user "
+                + "WHERE Email LIKE'" + loginbox.Text + "'" + " AND " + "Password LIKE '" + passbox.Text + "';", connect);
+            
+            int countuser = 0;
+            string role = "";
+            string firsname = "";
+            string lasname = "";
+            string login = "";
+           
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Fr.Show();
-                Hide();
+                countuser = reader.GetInt32(0);
+                role = reader.GetString("RoleId");
+                login = reader.GetString("Email");
+                firsname = reader.GetString("FirstName");
+                lasname = reader.GetString("LastName");
+            }
+            reader.Close();
+            if (countuser != 0) 
+            { 
+                if (role == "R") 
+                {
+                    Form7 runnermenu = new Form7();
+                    runnermenu.Show();
+                    this.Hide();
+                }
+                if (role == "A") 
+                {
+                    Form9 form = new Form9();
+                    form.Show();
+                    this.Hide();
+                }
+                if (role == "C") 
+                {
+                    Form8 koordmenu = new Form8();
+                    koordmenu.Show();
+                    this.Hide();
+                }
+                connect.Close(); 
             }
             else
-                MessageBox.Show("Пользователь не авторизован");
-
-
+            {
+                MessageBox.Show("Не верно введен логин или пароль"); 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

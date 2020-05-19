@@ -16,5 +16,12 @@ namespace WindowsFormsApp8
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form6 Flog = new Form6();
+            Flog.Show();
+            this.Hide();
+        }
     }
 }

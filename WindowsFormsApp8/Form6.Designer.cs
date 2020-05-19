@@ -37,6 +37,8 @@
             this.passbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Buttonlogin = new System.Windows.Forms.Button();
+            this.dataSet1 = new System.Data.DataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +123,10 @@
             this.Buttonlogin.UseVisualStyleBackColor = true;
             this.Buttonlogin.Click += new System.EventHandler(this.Buttonlogin_Click);
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "NewDataSet";
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +143,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form6";
             this.Text = "Form6";
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +160,6 @@
         private System.Windows.Forms.TextBox passbox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Buttonlogin;
+        private System.Data.DataSet dataSet1;
     }
 }
