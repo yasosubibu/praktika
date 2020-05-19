@@ -35,10 +35,10 @@
             this.btSponsor = new System.Windows.Forms.Button();
             this.btInfo = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lTime = new System.Windows.Forms.Label();
             this.mlTime = new System.Windows.Forms.Label();
             this.timerDay = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,16 @@
             this.panel2.Size = new System.Drawing.Size(545, 74);
             this.panel2.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(32, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(240, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "До Marathon Skills 2020:";
+            // 
             // lTime
             // 
             this.lTime.AutoSize = true;
@@ -131,16 +141,6 @@
             // 
             this.timerDay.Interval = 1000;
             this.timerDay.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(32, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "До Marathon Skills 2020:";
             // 
             // Form1
             // 

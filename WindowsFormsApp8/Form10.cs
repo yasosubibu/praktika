@@ -16,5 +16,26 @@ namespace WindowsFormsApp8
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 Freg = new Form6();
+            Freg.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form11 Fnewreg = new Form11();
+            Fnewreg.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 Fmain = new Form1();
+            Fmain.Show();
+            Hide();
+        }
     }
 }

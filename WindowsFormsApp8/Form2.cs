@@ -16,5 +16,12 @@ namespace WindowsFormsApp8
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 Fmain = new Form1();
+            Fmain.Show();
+            Hide();
+        }
     }
 }

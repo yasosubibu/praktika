@@ -41,8 +41,8 @@ namespace WindowsFormsApp8
 
         private void btRunner_Click(object sender, EventArgs e)
         {
-            Form6 FRlog = new Form6();
-            FRlog.Show();
+            Form10 Frop = new Form10();
+            Frop.Show();
             Hide();
 
         }
@@ -62,6 +62,13 @@ namespace WindowsFormsApp8
         private void mbLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 FRlog = new Form6();
+            FRlog.Show();
+            Hide();
         }
     }
 }
